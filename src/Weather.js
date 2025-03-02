@@ -38,38 +38,40 @@ export default function Weather() {
             </div>
           </div>
         </form>
-        <h1>{weatherData.city}</h1>
+        <h2>{weatherData.city}</h2>
         <ul>
           <li>{weatherData.date}</li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
           <div className="col-6">
-            <div calssName="clear-fix">
+            <div className="clear-fix">
               <img
                 src={weatherData.iconUrl}
                 alt={weatherData.description}
                 className="float-left"
               />
-              <span className="temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="unit">℃</span>
+              <div className="float-left">
+                <span className="temperature">
+                  {Math.round(weatherData.temperature)}
+                </span>
+                <span className="unit">℃</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>Humidity:{weatherData.humidity} %</li>
-            <li>Wind:{weatherData.wind} km/h</li>
-          </ul>
+          <div className="col-6">
+            <ul>
+              <li>Humidity:{weatherData.humidity} %</li>
+              <li>Wind:{weatherData.wind} km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     );
   } else {
-    const apiKey = "cf0f31ao4d106c8ff184dbac1a07a8t3";
+    const apiKey = "a2dda52dce059eb8a14e95aaa0db6ab7";
     let city = "New York";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }

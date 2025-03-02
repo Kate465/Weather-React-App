@@ -3,7 +3,6 @@
   font-weight: 100;
   line-height: 29px;
   margin: 20px 0 0 0;
-  text-align: center;
 }
 .Weather {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,4 +23,22 @@
 }
 .Weather form {
   margin-bottom: 20px;
+}
+.Weather .temperature {
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 64px;
+}
+.Weather img {
+  height: 64px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.Weather .unit {
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+  position: relative;
+  top: -32px;
+  font-size: 16px;
 }
