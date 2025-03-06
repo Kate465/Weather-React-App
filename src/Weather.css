@@ -31,9 +31,10 @@
   line-height: 64px;
 }
 .Weather img {
-  height: 64px;
-  margin-right: 10px;
+  line-height: 64px;
+  margin-bottom: 40px;
   display: inline-block;
+  margin-right: 5px;
 }
 .Weather .unit {
   color: rgb(33, 33, 33);

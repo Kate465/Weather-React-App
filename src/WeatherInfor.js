@@ -20,12 +20,11 @@ export default function WeatherInfor(props) {
               alt={props.data.description}
               className="float-left"
             />
-            <div className="float-left">
-              <span className="temperature">
-                {Math.round(props.data.temperature)}
-              </span>
-              <span className="unit">℃</span>
-            </div>
+
+            <span className="temperature">
+              {Math.round(props.data.temperature)}
+            </span>
+            <span className="unit">℃</span>
           </div>
         </div>
         <div className="col-6">
